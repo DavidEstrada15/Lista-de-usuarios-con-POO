@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuarios</title>
+    <script type="module" defer src="script.js"></script>
+    <script type="module" defer src="clases/usuario.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Lista de Usuarios
+        </h1>
+        <button>
+            <a href="usuarios.html">Lista de usuarios ingresados</a>
+        </button>
+    </header>
+    <main>
+    <form>
+        <h2>Ingresa un usuario</h2>
+        <label for="Username">Tu Nombre:<input placeholder="Nombre de usuario"  name="Username" type="text" id="Username"></label>
+        <label for="Email">Tu Email:<input placeholder="Tu Email" name="Email" type="text" id="Email"></label>
+        <label for="photo">Tu Foto:<input placeholder="La URL de tu foto" name="photo" type="url" id="photo"></label>
+        <label for="Age">Tu Edad:<input placeholder="Tu edad" name="Age" id="Age" required max="100" type="number"></label>
+        <label for="password">Tu Clave:<input placeholder="Tu contraseña" name="password" id="password" required type="password"></label>
+        <button type="submit">Ingresa los datos</button>
+    </form>
+</main>
+</body>
+</html>
