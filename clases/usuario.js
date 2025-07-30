@@ -20,20 +20,22 @@ function Renderizar() {
     }
 
     crearusuario = () =>{
-        let article= document.createElement("article")
+         let article= document.createElement("article")
 
          let fotoelement= document.createElement("img")
         fotoelement.src= this.foto
 
         let nombreelement= document.createElement("h2")
-        nombreelement.innerHTML= `<span>Nombre: </span> ${this.nombre}`
+        nombreelement.innerHTML= ` ${this.nombre}`
+        nombreelement.id= "Name"
 
+        let div= document.createElement("div")
         let edadelement= document.createElement("p")
         edadelement.innerHTML= `<span>Edad:</span> ${this.edad}`
 
         let correoelement= document.createElement("p")
-        correoelement.innerHTML= `<span>Correo:</span> ${this.correo}`
-
+        correoelement.innerHTML= ` ${this.correo}`
+        correoelement.id= "Emailelement"
         let passwordelement= document.createElement("p")
         passwordelement.innerHTML= `<span>Contraseña:</span> ${this.password}`
 
@@ -44,23 +46,22 @@ function Renderizar() {
         eraseElement.id= "Erase"
 
         eraseElement.addEventListener("click", ()=>{
-            console.log(usuarios)
-            console.log(this.id)
            usuarios.splice(this.id, 1)
            usuarios.forEach((usuario) =>{
             if (usuario.id > this.id) {
                 usuario.id --
             }
            })
-
-           Renderizar()
+           localStorage.setItem("Usuarios", JSON.stringify(usuarios))
+           location.reload()
         })
+        div.appendChild(passwordelement)
+        div.appendChild(edadelement)
         article.appendChild(fotoelement)
         article.appendChild(nombreelement)
-        article.appendChild(eraseElement)
-        article.appendChild(edadelement)
         article.appendChild(correoelement)
-        article.appendChild(passwordelement)
+        article.appendChild(eraseElement)
+        article.appendChild(div)
         return article
     }
 };
