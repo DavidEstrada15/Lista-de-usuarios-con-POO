@@ -1,12 +1,4 @@
 let usuarios= JSON.parse(localStorage.getItem("Usuarios")) || []
-let section= document.querySelector("section")
-console.log(usuarios)
-function Renderizar() {
-    section.innerHTML= ``
-    usuarios.forEach((usuario)=>{
-        let usernew= new Usuario(usuario.foto,usuario.nombre, usuario.edad, usuario.correo, usuario.password, usuario.id)
-        section.appendChild(usernew.crearusuario())
-})}
 
 
  class Usuario {
