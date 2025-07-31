@@ -33,6 +33,7 @@ header div{
 
 button{
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 header a{
@@ -47,7 +48,7 @@ border: 2px solid black;
 
 }
 
-header div button:hover{
+ button:hover{
     transform: scale(1.1);
 }
 
