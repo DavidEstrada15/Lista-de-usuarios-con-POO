@@ -7,7 +7,6 @@
 
 body{
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
@@ -26,25 +25,33 @@ header{
     z-index: 0;
 }
 
-header button a{
-text-decoration: none;
-color: black;
-width: 100%;
-height: 100%;
 
+header div{
+    display: flex;
+    gap: 10px;
 }
 
 button{
     cursor: pointer;
 }
 
-header div button{
+header a{
  transition: all 0.5s ease;   
  background-color:chartreuse;
- padding: 5px 10px;
+display: flex;
+place-self: center;
+ text-decoration: none;
+color: black;
+padding: 10px 20px;
+border: 2px solid black;
+
 }
 
 header div button:hover{
+    transform: scale(1.1);
+}
+
+header a:hover{
     transform: scale(1.1);
 }
 
@@ -54,7 +61,6 @@ main{
     flex-direction: column;
     width: 70vw;
     border-radius: 10px;
-    height: 100vh;
     gap: 50px;
 }
 
@@ -71,6 +77,7 @@ form{
     place-content: center;
     border-radius: 10px;
     color: white;
+    top: 10vh;
 }
 
 form button{
@@ -100,7 +107,6 @@ ul{
 main section{
     display: grid;
     width: 100vw;
-    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     overflow-y: auto;
@@ -202,7 +208,7 @@ article div{
     main section{
         grid-template-columns: 1fr;
         place-content: center;
-        gap: 20px;
+        gap: 40px;
     }
     main section article{
         height: 100%;
@@ -234,11 +240,11 @@ article div{
     }
 }
 
-@media (min-width:481px) and (max-width: 820px) {
+@media (min-width:481px) and (max-width: 1024px) {
     main section{
         grid-template-columns: 1fr;
         place-content: center;
-        gap: 20px;
+        gap: 40px;
     }
     
     main section article{
